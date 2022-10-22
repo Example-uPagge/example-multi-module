@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.struchkov.filmorate</groupId>
+    <artifactId>filmorate-bom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <filmorate.version>0.0.1-SNAPSHOT</filmorate.version>
+        <filmorate.domain.version>${filmorate.version}</filmorate.domain.version>
+        <filmorate.context.version>${filmorate.version}</filmorate.context.version>
+        <filmorate.core.version>${filmorate.version}</filmorate.core.version>
+        <filmorate.data.jpa.version>${filmorate.version}</filmorate.data.jpa.version>
+        <filmorate.data.local.version>${filmorate.version}</filmorate.data.local.version>
+        <filmorate.web.version>${filmorate.version}</filmorate.web.version>
+
+        <spring.starter.parent.version>2.7.5</spring.starter.parent.version>
+
+        <mapstruct.version>1.5.2.Final</mapstruct.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring.starter.parent.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-domain</artifactId>
+                <version>${filmorate.domain.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-context</artifactId>
+                <version>${filmorate.context.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-core</artifactId>
+                <version>${filmorate.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-data-local</artifactId>
+                <version>${filmorate.data.local.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-data-jpa</artifactId>
+                <version>${filmorate.data.jpa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.struchkov.filmorate</groupId>
+                <artifactId>filmorate-web</artifactId>
+                <version>${filmorate.web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

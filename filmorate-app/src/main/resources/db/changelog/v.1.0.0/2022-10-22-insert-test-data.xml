@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="2022-10-22-insert-test-data" author="uPagge">
+        <insert tableName="person">
+            <column name="name" value="Иванов Иван"/>
+            <column name="email" value="ivanov@ya.ru"/>
+            <column name="login" value="ivanov"/>
+            <column name="birthday" value="1990-12-20"/>
+        </insert>
+
+        <insert tableName="person">
+            <column name="name" value="Петров Петр"/>
+            <column name="email" value="petrov@ya.ru"/>
+            <column name="login" value="petrov"/>
+            <column name="birthday" value="1980-06-12"/>
+        </insert>
+
+        <insert tableName="film">
+            <column name="name" value="Фильм 1"/>
+            <column name="description" value="Простой фильм о почтальоне"/>
+            <column name="date_release" value="2000-10-11"/>
+            <column name="duration_in_minutes" value="90"/>
+            <column name="date_created" value="2022-10-22T12:12:12"/>
+            <column name="person_owner_id" value="1"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
