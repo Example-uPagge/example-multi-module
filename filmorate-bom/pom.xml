@@ -14,7 +14,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <filmorate.version>0.0.1-SNAPSHOT</filmorate.version>
+        <filmorate.version>${project.version}</filmorate.version>
         <filmorate.domain.version>${filmorate.version}</filmorate.domain.version>
         <filmorate.context.version>${filmorate.version}</filmorate.context.version>
         <filmorate.core.version>${filmorate.version}</filmorate.core.version>

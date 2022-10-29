@@ -39,7 +39,9 @@ public class FilmController {
     public ResponseEntity<FilmDto> create(@RequestBody FilmDto filmDto) {
         return ResponseEntity.ok(
                 conversionService.convert(
-                        filmService.create(conversionService.convert(filmDto, Film.class)),
+                        filmService.create(
+                                conversionService.convert(filmDto, Film.class)
+                        ),
                         FilmDto.class
                 )
         );
